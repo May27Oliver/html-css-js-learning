@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>練習練習</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>我的圖片</h1>
+    <img src="src/img/0.jpeg" title ="我妻善逸" alt="我妻善逸">
+    <h3>我的最愛</h3>
+    <ul>
+        <li><a href="http://www.google.com/">Google</a></li>
+        <li>Facebook</li>
+        <li>PTT</li>
+    </ul>
+    <h3>MLB Baseball</h3>
+    <table class ="MLB">    <!-- 嘗試用css改變table外觀，卻無法-->
+        <tr>
+        <td>隊名</td>
+        <td>Win</td>
+        <td>Lose</td>
+        </tr>
+        <tr>
+            <td>New York Yankee</td>
+            <td>o</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>Red Sockets</td>
+            <td>x</td>
+            <td>o</td>
+        </tr>
+    </table>
+
+</body>
+</html>
