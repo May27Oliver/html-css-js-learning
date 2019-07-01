@@ -1,0 +1,7 @@
+.table{
+    /* display:table; */
+    border: 2px;
+    width:400;
+    border-spacing:2px;
+    border-color: gray;
+}
