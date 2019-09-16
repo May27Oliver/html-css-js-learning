@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    var a;  //a:100   b:20   c:30  e:50, function test
+    a=10;
+
+    var b = 20;
+
+    c = 30;
+
+    function test(){
+        var d = 40;
+        
+        a= 100;
+        d= 400;
+        c=70;
+        e= 50;//因為e在函式裡找不到，所以js跑到函式外去找
+	        //，也沒找到，所以就hoister了一個記憶體空間給e，
+			//並將50指派進e；因為這個js動作，e
+			//這個未宣告的東東 變成了全域變數
+
+        return;
+    }
+
+    test();
+    document.write( "a : " , a, "<br>");	//100
+    document.write( "b : " , b, "<br>");	//20
+    document.write( "c : " , c, "<br>");	//70
+    // document.write( "d : " , test().d, "<br>");	//error  
+    //如果有上面這行，出現錯誤，出現錯誤是因為區域變數無法
+    // 被域外的函式所使用。
+    // 下面就出不來了。
+    document.write( "e : " , e, "<br>");	//50 
+    </script>
+
+    <script>
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

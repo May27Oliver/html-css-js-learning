@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+<body>
+
+<h2>没有參數, 没有傳回值</h2>
+<script type="text/javascript">
+function sayHello(){
+	document.write( "Hello~~<br>");
+	return;
+}
+
+sayHello();
+</script>  
+
+
+<h2>没有參數, 没有傳回值</h2>
+<script type="text/javascript">
+function sayHelloToSomeone( name ){  //var name 
+	document.write( `Hello, ${name}您好~~<br>`);
+}
+sayHelloToSomeone( );
+sayHelloToSomeone( "鈺玟"); //.....
+sayHelloToSomeone( "澤樹");
+
+// parseInt("321")
+</script>
+
+<h2>有參數, 有傳回值</h2>
+<script type="text/javascript">
+function sum( a, b){  
+	var total = 0;    
+	total = a + b;
+
+	return total;
+}
+
+var number = sum(10,20);
+document.write( number, "<br>");
+
+document.write( sum(100, 200), "<br>");
+</script>    
+</body>
+</html>

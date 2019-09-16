@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var total,i;
+function sum(){
+    total=0;
+    for(i=0;i<arguments.length;i++){
+        total+=arguments[i];
+    }
+    return total;
+}
+
+document.write("100 + 200 =",sum(100,200),"<br>");
+document.write("100 + 200 +300 =",sum(100,200,300),"<br>");
+document.write("100 + 200 =",sum(100,200),"<br>");
+</script>
+
+<h2>預設值</h2>
+<script>
+    function greeting(word="hi~"){
+        document.write(word,"<br>");
+    }
+greeting("早安");
+greeting();
+
+</script>
+<body>
+    
+</body>
+</html>

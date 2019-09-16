@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" align="center">
+        <tr>
+            <td>1111111111111</td>
+        </tr>
+        <tr>
+            <td>aaaaaaaaaaaaa</td>
+        </tr>
+        <tr>
+            <td>1111111111111</td>
+        </tr>
+        <tr>
+            <td>aaaaaaaaaaaaa</td>
+        </tr>
+        <tr>
+            <td>1111111111111</td>
+        </tr>
+        <tr>
+            <td>aaaaaaaaaaaaa</td>
+        </tr>
+        <tr>
+            <td>1111111111111</td>
+        </tr>
+        <tr>
+            <td>aaaaaaaaaaaaa</td>
+        </tr>
+        <tr>
+            <td>1111111111111</td>
+        </tr>
+        <tr>
+            <td>aaaaaaaaaaaaa</td>
+        </tr>
+    </table>
+
+    <script>
+        function highLight(e){
+           var obj = e.target;
+           obj.style.color="deeppink";
+           obj.style.backgroundColor="lightblue";
+        }//事件物件回傳回事件處理器
+
+        function normal(e){
+            var obj = e.target;
+            obj.style.color= "black";
+            obj.style.backgroundColor="white";
+        }//事件物件回傳回事件處理器
+
+        function init(){
+            var tds=document.getElementsByTagName("td");
+            
+            for(let i=0; i<obj.length;i++){
+            tds[i].onmouseover=highLight;
+            tds[i].onmouseout=normal;
+            }
+        }
+
+        window.onload=inite;
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String</title>
+</head>
+<body>
+<script type="text/javascript">
+// var str="abcdeabcde";
+// var obj = new String(123);
+// document.write("typeof str : " , typeof str, "<br>"); //string
+// document.write("typeof obj : " , typeof obj, "<br>"); //object
+
+// document.write("length : " , str.length , "<br>"); 
+// document.write("toUpperCase() : " , str.toUpperCase(), "<br>");
+// document.write("str : " , str, "<br>");
+
+// document.write("indexOf('cd') : " , str.indexOf('cd'), "<br>"); //2
+// document.write("indexOf('cdd') : " , str.indexOf('cdd'), "<br>");//-1
+// document.write("indexOf('cd', 4) : " , str.indexOf('cd', 4), "<br>"); //2
+
+// document.write("lastIndexOf('cd') : " , str.lastIndexOf('cd'), "<br>"); //7
+// document.write("lastIndexOf('cdd') : " , str.lastIndexOf('cdd'), "<br>"); //-1
+
+// document.write("match('cd') : " , str.match('cd'), "<br>");  //cd
+// document.write("match('cdd') : " , str.match('cdd'), "<br>");//null 
+
+// document.write("charAt(3) : " , str.charAt(3) , "<br>"); //d
+// document.write("charCodeAt(3) : " , str.charCodeAt(3) , "<br>");  //100
+
+// document.write("substr(2,5) : " , str.substr(2,5), "<br>"); //從索引值2開始取長度5 , cdeab
+// document.write("substring(2,5) : " , str.substring(2,5), "<br>");  //從索引值2開始取到索引值4, cde
+
+// let birthday = "1988-08-09";
+// let mm = birthday.substr(5,2);
+// document.write("mm : " , mm, "<br>"); 
+
+// document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); 
+function makeItRight(){
+    // 取出主檔名、附檔名
+    let file="Tony.smile.png";
+    // 先取得第二個.的索引值
+    var index=file.lastIndexOf(".");
+    // 取出主檔名
+    file.substr(0,index);
+    // 取出副檔名
+    file.substr(index+1);
+    document.write("主檔名為：",file.substr(0,index),"副檔名為：",file.substr(index+1),"<br>")
+    if(file.substr(index+1)=="png"){
+        document.write("副檔名正確，檔案上傳成功");
+    }else if(file.substr(index+1)=="jpg"){
+        document.write("副檔名正確，檔案上傳成功");
+    }else if(file.substr(index+1)=="gif"){
+        document.write("副檔名正確，檔案上傳成功");
+    }else if(file.substr(index+1)=="bmp"){
+        document.write("副檔名正確，檔案上傳成功");
+    }else{
+        document.write("檔案格式錯誤");
+    }
+}
+
+makeItRight();
+
+function makeItRight2(){
+    // 取出主檔名、附檔名
+    let file="Tony.smile.png";
+    // 先取得第二個.的索引值
+    var index=file.lastIndexOf(".");
+    // 取出主檔名
+    file.substr(0,index);
+    // 取出副檔名
+    var format=file.substr(index+1);
+    document.write("主檔名為：",file.substr(0,index),"副檔名為：",file.substr(index+1),"<br>")
+    var fileTip=["png","jpg","gif","bmp"];
+
+    if(fileTip.indexOf(format)==-1){
+        document.write("檔案格式錯誤唷！");
+        }else{
+        document.write("檔案ok豪棒棒！");
+        }
+}
+makeItRight2();
+</script>    
+</body>
+</html>

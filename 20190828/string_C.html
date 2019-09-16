@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String</title>
+</head>
+<body>
+<script type="text/javascript">
+var str="abcdeabcde";
+var obj = new String(123);
+document.write("typeof str : " , typeof str, "<br>"); //string
+document.write("typeof obj : " , typeof obj, "<br>"); //object
+
+document.write("length : " , str.length , "<br>"); 
+document.write("toUpperCase() : " , str.toUpperCase(), "<br>");
+document.write("str : " , str, "<br>");
+
+document.write("indexOf('cd') : " , str.indexOf('cd'), "<br>"); //2
+document.write("indexOf('cdd') : " , str.indexOf('cdd'), "<br>");//-1
+document.write("indexOf('cd', 4) : " , str.indexOf('cd', 4), "<br>"); //2 從第四個字串開始找，找到第一次cd出現時的索引值。
+
+document.write("lastIndexOf('cd') : " , str.lastIndexOf('cd'), "<br>"); //7
+document.write("lastIndexOf('cdd') : " , str.lastIndexOf('cdd'), "<br>"); //-1
+
+document.write("match('cd') : " , str.match('cd'), "<br>");  //cd
+document.write("match('cdd') : " , str.match('cdd'), "<br>");//null 
+
+document.write("charAt(3) : " , str.charAt(3) , "<br>"); //d 取得索引值為3的字元
+document.write("charCodeAt(3) : " , str.charCodeAt(3) , "<br>");  //100 取得索引值為3的字元的內碼
+
+document.write("substr(2,5) : " , str.substr(2,5), "<br>"); //從索引值2開始取長度5 , cdeab 
+document.write("substr(2)..... : " , str.substr(2), "<br>"); //cdeabcde 如果()內沒有第二個值就印完整列字串
+document.write("substring(2,5) : " , str.substring(2,5), "<br>");  //從索引值2開始取到索引值4, cde
+
+let birthday = "1988-08-09";
+let mm = birthday.substr(5,2);
+document.write("mm : " , mm, "<br>"); 
+document.write( "<hr>");
+
+//............取出主檔名, 副檔名 startg
+let extAllowed = ["jpg", "png", "gif", "bmp"];
+// let fileStr = "Tony.smile.gif";
+let fileStr = "Tony.smile.pptx";
+let fileName, fileExt;
+let dotPos = fileStr.lastIndexOf(".");
+fileName = fileStr.substring(0, dotPos);
+fileExt = fileStr.substr(dotPos+1); //gif
+document.write("fileName : " , fileName, "<br>"); 
+document.write("fileExt : " , fileExt, "<br>"); 
+
+if( extAllowed.indexOf(fileExt) == -1){ //在extAllowed中找不到
+	document.write(  "檔案型式不合<br>");
+}else{
+	document.write(  "檔案型式OK<br>");
+}
+
+//............取出主檔名, 副檔名 end
+
+document.write( "<hr>");
+document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); 
+
+
+//............split
+document.write( "<hr>");
+let url = "www.ncu.edu.tw";
+document.write( "url : ", url, "<br>");
+
+let arr = url.split(".");
+
+for( var i=0; i<arr.length; i++){
+	document.write( i, " : ", arr[i].fontcolor("deeppink").bold().italics(), "<br>");
+}
+</script>    
+</body>
+</html>

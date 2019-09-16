@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style type="text/css">
+	h2{
+		color:deeppink;
+	}
+</style>
+</head>
+<body>
+<h2>印9列1 2 3..9</h2>
+<!-- <script type="text/javascript">
+var i,j;
+for( i=1; i<=9; i++){
+	//document.write( "1 2 3 4 5 6 7 8 9", "<br>");
+	for( j=1; j<=9; j++){
+		document.write(j, "&nbsp;&nbsp;");
+	}
+	document.write( "<br>");
+}	
+</script>     -->
+
+<!-- <script>
+var i=1 ,j=1;
+
+while(i<=9){
+	j=1;
+	while(j<=9){
+		document.write(j,"&nbsp;&nbsp;");
+	    j++;
+	}
+	document.write("<br>");
+	i++;
+} 
+
+</script>-->
+
+<script>
+var i=1,j=1;
+
+do{
+	j=1;
+	document.write("<br>")
+	do{
+		document.write(j,"&nbsp;&nbsp;");
+		j++;
+	}while(j<=9)
+   i++
+}while(i<=9);
+
+</script>
+
+<h2>印出九九乘法表</h2>
+<script>
+	for(let i=1;i<10;i++){
+        for(let j=1;j<10;j++){
+            document.write(i,"*",j,"=",i*j,"<br>");
+        }
+    }
+</script>
+
+<h2>while語法印99乘法表</h2>
+<script>
+var i=1 ,j=1;
+
+while(i<=9){
+	j=1;
+	while(j<=9){
+		document.write(i,"*",j,"=",i*j,"<br>");
+	    j++;
+	}
+	document.write("<br>");
+	i++;
+} 
+</script>
+
+<h2>將九九乘法表置於表格之中</h2>
+<script>
+var i,j;
+document.write("<table class='table99' border='1'>");
+for(i=1;i<=9;i++){
+	document.write("<tr>");
+	for(j=1;j<=9;j++){
+		// document.write("<td>",i,"*",j,"=",i*j,"</td>");
+		document.write( "<td>", i*j, "</td>");
+	}
+	document.write("</tr>"); 
+}
+document.write("</table>");
+</script>
+</body>
+</html>
